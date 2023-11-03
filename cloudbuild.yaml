@@ -3,3 +3,11 @@ steps:
 - name: 'gcr.io/cloud-builders/gcloud'
   entrypoint: 'bash'
   args: ['tools/myScript.sh','--foo']
+- name: 'gcr.io/cloud-builders/gcloud'
+  entrypoint: 'bash'
+  id: "Deprecate images in GAR us-central1"
+  args:
+    - tools/gcr-image-dep.sh
+    - us-central1-docker.pkg.dev/cloud-config-sdk/images/config-sdk-tf
+    - v0.0.104
+    
