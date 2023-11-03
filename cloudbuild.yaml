@@ -1,0 +1,4 @@
+timeout: "14400s"
+steps:
+- name: 'gcr.io/cloud-builders/sh'
+  args: ['-c', 'echo "Hello, world!"']
