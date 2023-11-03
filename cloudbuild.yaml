@@ -1,4 +1,5 @@
 timeout: "14400s"
 steps:
-- name: 'gcr.io/cloud-builders/sh'
-  args: ['-c', 'echo "Hello, world!"']
+- name: 'gcr.io/cloud-builders/gcloud'
+  entrypoint: 'bash'
+  args: ['tools/myScript.sh','--foo']
